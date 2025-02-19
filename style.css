@@ -1,0 +1,385 @@
+.hero-bg {
+    background: linear-gradient(to right, #ffafcc, #ff88aa);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.bg-pink-100 {
+    background-color: #fce7f3;
+}
+.text-pink-700 {
+    color: #be185d;
+}
+.rounded-lg {
+    border-radius: 20px;
+}
+.shadow-lg {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.max-w-3xl {
+    max-width: 800px;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.delay-200 {
+    animation-delay: 0.2s;
+}
+
+/*INI MENU */
+.modal-transition {
+    transition: all 0.3s ease-in-out;
+  }
+  
+.menu-item {
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.menu-item:hover {
+    background: #FFE0EB;
+    transform: scale(1.05);
+}
+
+.menu-image {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.menu-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #FF77A9;
+}
+
+.menu-desc {
+    font-size: 1rem;
+    color: #666;
+}
+
+/*sejarah,nohp, penerima pesanan*/
+/*Sejarah*/
+
+.timeline-container {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.timeline {
+    position: relative;
+    margin: 0 auto;
+    padding: 20px 0;
+    max-width: 800px;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    position: relative;
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: fadeInRight 1s forwards;
+    transition: transform 0.3s ease-out;
+}
+
+.timeline-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.timeline-circle {
+    width: 30px;
+    height: 30px;
+    background-color: #FF77A9;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.timeline-content {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 70%;
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: transform 0.3s ease-out;
+    z-index: 1;
+}
+
+.timeline-content h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #FF77A9;
+}
+
+.timeline-content p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Keyframes for Animation */
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+    .timeline-container {
+        padding: 30px 15px;
+    }
+
+    .timeline {
+        padding: 20px 0;
+    }
+
+    .timeline-item {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .timeline-circle {
+        width: 25px;
+        height: 25px;
+    }
+
+    .timeline-content {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .timeline-item {
+        flex-direction: column;
+        align-items: center;
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .timeline-circle {
+        position: relative;
+        margin-bottom: 15px;
+        left: 0;
+    }
+
+    .timeline-content {
+        width: 90%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .timeline-content h3 {
+        font-size: 1rem;
+    }
+
+    .timeline-content p {
+        font-size: 0.9rem;
+    }
+
+    /* Hide the circles on small screens */
+    .timeline-circle {
+        display: none;
+    }
+}
+
+/* Hover effects */
+.timeline-item:hover .timeline-content {
+    transform: translateX(10px);
+}
+
+/* Styles for mobile */
+@media screen and (max-width: 480px) {
+    .timeline-container {
+        padding: 20px 10px;
+    }
+
+    .timeline-item {
+        margin-bottom: 25px;
+    }
+
+    .timeline-circle {
+        width: 20px;
+        height: 20px;
+    }
+
+    .timeline-content {
+        padding: 10px;
+        width: 95%;
+    }
+
+    .timeline-content h3 {
+        font-size: 1rem;
+    }
+
+    .timeline-content p {
+        font-size: 0.8rem;
+    }
+}
+
+
+/* Hover effects */
+.timeline-item:hover .timeline-content {
+    transform: translateX(10px);
+}
+
+
+/* NO TLP DAN ALAMAT */
+
+/* Style for the Pesanan Section */
+.pesanan {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.pesanan h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #FF77A9;
+    margin-bottom: 20px;
+}
+
+.pesanan-item {
+    background-color: #FF77A9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    transform: translateY(0);
+}
+#counter {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.pesanan-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.pesanan-item h3 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+}
+
+.pesanan-item p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Style for the Lokasi Cabang Kami Section */
+.lokasi {
+    padding: 50px 20px;
+    background-color: #fafafa;
+}
+
+.lokasi h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #FF77A9;
+    margin-bottom: 20px;
+}
+
+.lokasi-item {
+    background-color: #FF77A9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    transform: translateY(0);
+}
+
+.lokasi-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.lokasi-item h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+}
+
+.lokasi-item p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .pesanan-item,
+    .lokasi-item {
+        padding: 20px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .pesanan-item h3,
+    .lokasi-item h3 {
+        font-size: 2rem;
+    }
+
+    .pesanan-item p,
+    .lokasi-item p {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .pesanan-item h3,
+    .lokasi-item h3 {
+        font-size: 1.8rem;
+    }
+
+    .pesanan-item p,
+    .lokasi-item p {
+        font-size: 0.8rem;
+    }
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes zoomIn {
+    from { transform: scale(0.7); }
+    to { transform: scale(1); }
+}

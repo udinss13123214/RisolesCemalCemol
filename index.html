@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Toko Risoles Kami</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+</head>
+<body class="bg-pink-50">
+    <!-- Header -->
+    <header class="hero-bg text-white text-center py-10">
+        <h1 class="text-5xl font-bold">Toko Risoles Kami</h1>
+        <p class="text-lg">Nikmati berbagai varian risoles lezat dan spesial!</p>
+    </header>
+    
+    <section class="container mx-auto text-center my-10 px-6">
+        <h2 class="text-2xl md:text-1xl font-bold text-pink-700 leading-snug animate-fadeIn">
+            Nikmati berbagai pilihan risoles lezat kami dengancita rasa yang menggugah selera.
+        </h2>
+        <p class="mt-4 text-lg md:text-xl text-gray-700 max-w-3xl mx-auto animate-fadeIn delay-200">
+            Dari yang gurih hingga pedas, semua dibuat dengan bahan berkualitas dan penuh cinta.
+        </p>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="container mx-auto text-center my-10">
+        <h2 class="text-2xl font-semibold text-pink-700">Menu Kami</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 px-6 mt-6">
+            
+            <!-- Risoles Original -->
+            <div class="bg-white shadow-lg rounded-lg p-6 text-center hover:shadow-xl hover:bg-pink-50 transition-all cursor-pointer" 
+                onclick="openModal('original')">
+                <img src="jpg/risol_pedas.jpg" alt="Risoles Original" class="w-full h-40 object-cover rounded-lg mb-4">
+                <h3 class="text-xl font-bold text-pink-600">Risoles Mayo Daging Asap</h3>
+                <p class="text-gray-600">Risoles klasik dengan isian ragout daging yang lezat.</p>
+            </div>
+    
+            <!-- Risoles pedas -->
+            <div class="bg-white shadow-lg rounded-lg p-6 text-center hover:shadow-xl hover:bg-pink-50 transition-all cursor-pointer"
+             onclick="openModal('pedas')">
+                <img src="jpg/risol_pedas.jpg" alt="Risoles Ayam" class="w-full h-40 object-cover rounded-lg mb-4">
+                <h3 class="text-xl font-bold text-pink-600">Risoles pedas</h3>
+                <p class="text-gray-600">Isian ayam suwir yang empuk dan gurih dengan bumbu spesial.</p>
+            </div>
+
+             <!-- Risoles Keju -->
+             <div class="bg-white shadow-lg rounded-lg p-6 text-center hover:shadow-xl hover:bg-pink-50 transition-all cursor-pointer"
+             onclick="openModal('keju')">
+                <img src="jpg/risol_pedas.jpg" alt="Risoles Ayam" class="w-full h-40 object-cover rounded-lg mb-4">
+                <h3 class="text-xl font-bold text-pink-600">Risoles Keju</h3>
+                <p class="text-gray-600">Isian ayam suwir yang empuk dan gurih dengan bumbu spesial.</p>
+            </div>
+
+            <!-- Risoles Jagung -->
+            <div class="bg-white shadow-lg rounded-lg p-6 text-center hover:shadow-xl hover:bg-pink-50 transition-all cursor-pointer"
+            onclick="openModal('jagung')">
+               <img src="jpg/risol_pedas.jpg" alt="Risoles Ayam" class="w-full h-40 object-cover rounded-lg mb-4">
+               <h3 class="text-xl font-bold text-pink-600">Risoles Jagung</h3>
+               <p class="text-gray-600">Isian ayam suwir yang empuk dan gurih dengan bumbu spesial.</p>
+           </div>
+
+           <!-- Risoles Sosis -->
+           <div class="bg-white shadow-lg rounded-lg p-6 text-center hover:shadow-xl hover:bg-pink-50 transition-all cursor-pointer"
+           onclick="openModal('sosis')">
+              <img src="jpg/risol_pedas.jpg" alt="Risoles Ayam" class="w-full h-40 object-cover rounded-lg mb-4">
+              <h3 class="text-xl font-bold text-pink-600">Risoles Sosis</h3>
+              <p class="text-gray-600">Isian ayam suwir yang empuk dan gurih dengan bumbu spesial.</p>
+          </div>
+
+           <!-- Risoles Sosis -->
+           <div class="bg-white shadow-lg rounded-lg p-6 text-center hover:shadow-xl hover:bg-pink-50 transition-all cursor-pointer"
+           onclick="openModal('kroket')">
+              <img src="jpg/risol_pedas.jpg" alt="Risoles Ayam" class="w-full h-40 object-cover rounded-lg mb-4">
+              <h3 class="text-xl font-bold text-pink-600">Kroket</h3>
+              <p class="text-gray-600">Isian ayam suwir yang empuk dan gurih dengan bumbu spesial.</p>
+          </div>
+
+          <!-- Risoles Pisang-->
+          <div class="bg-white shadow-lg rounded-lg p-6 text-center hover:shadow-xl hover:bg-pink-50 transition-all cursor-pointer"
+          onclick="openModal('pisang')">
+             <img src="jpg/risol_pedas.jpg" alt="Risoles Ayam" class="w-full h-40 object-cover rounded-lg mb-4">
+             <h3 class="text-xl font-bold text-pink-600">Kroket</h3>
+             <p class="text-gray-600">Isian ayam suwir yang empuk dan gurih dengan bumbu spesial.</p>
+         </div>
+        </div>
+    </section>
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/6285726559608" target="_blank" 
+   class="fixed bottom-5 right-5 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-all duration-300 z-50">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" class="w-8 h-8">
+</a>
+    
+  <!-- Modal -->
+<div id="menuModal" class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm hidden flex justify-center items-center z-50 transition-opacity duration-300">
+    <div id="modalContent" class="bg-white p-6 rounded-lg shadow-lg max-w-md w-full transform scale-95 opacity-0 transition-all duration-300 relative">
+        <button onclick="closeModal()" class="absolute top-2 right-2 text-gray-600 hover:text-gray-800 text-2xl">&times;</button>
+        <h3 id="modalTitle" class="text-xl font-bold text-pink-600"></h3>
+        <img id="modalImage" src="" alt="" class="w-full h-60 object-cover rounded-lg mt-3">
+        <p class="mt-3"><strong>Bahan:</strong> <span id="modalBahan"></span></p>
+        <p class="mt-2"><strong>Deskripsi:</strong> <span id="modalDeskripsi"></span></p>
+        <p class="mt-2 font-bold text-pink-600"><strong>Harga:</strong> <span id="modalHarga"></span></p>
+    </div>
+</div>
+
+    
+
+    
+<!-- END HEREE!!!! -->
+
+    <section class="timeline-container container mx-auto text-center my-10">
+        <h2 class="text-2xl font-semibold text-pink-700">Sejarah Toko Risoles Kami</h2>
+        <div class="timeline mt-6">
+            <!-- Timeline Item 1 -->
+            <div class="timeline-item">
+                <div class="timeline-circle"></div>
+                <div class="timeline-content">
+                    <h3 class="font-bold text-lg text-pink-600">2013</h3>
+                    <p class="text-gray-600">Kami mulai berdiri di kota pertama kami, dengan tujuan memberikan risoles berkualitas. Berfokus pada rasa dan kualitas yang tidak ada duanya.</p>
+                </div>
+            </div>
+    
+            <!-- Timeline Item 2 -->
+            <div class="timeline-item">
+                <div class="timeline-circle"></div>
+                <div class="timeline-content">
+                    <h3 class="font-bold text-lg text-pink-600">2014</h3>
+                    <p class="text-gray-600">Toko kami mulai dikenal luas dan mendapatkan banyak pelanggan setia yang terus mendukung kami dengan pesanan yang terus meningkat.</p>
+                </div>
+            </div>
+    
+            <!-- Timeline Item 3 -->
+            <div class="timeline-item">
+                <div class="timeline-circle"></div>
+                <div class="timeline-content">
+                    <h3 class="font-bold text-lg text-pink-600">2015</h3>
+                    <p class="text-gray-600">Kita mulai memperluas cabang pertama di pusat kota. Ini menjadi titik penting dalam perjalanan kami.</p>
+                </div>
+            </div>
+    
+            <!-- Timeline Item 4 -->
+            <div class="timeline-item">
+                <div class="timeline-circle"></div>
+                <div class="timeline-content">
+                    <h3 class="font-bold text-lg text-pink-600">2020</h3>
+                    <p class="text-gray-600">Kini kami berkembang pesat dan memiliki dua cabang dengan pelanggan yang semakin banyak. Terima kasih kepada semua yang telah mendukung kami!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section class="pesanan container mx-auto text-center my-10">
+        <h2 class="text-2xl font-semibold text-pink-700">Jumlah Pesanan yang Diterima </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6 justify-center">
+            <div class="pesanan-item bg-pink-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                <h3 class="font-bold text-4xl text-white-600" id="counter">1.200+</h3>
+                <p class="text-gray-600">Pesanan yang Diterima Setiap Bulann</p>
+            </div>
+            <div class="pesanan-item bg-pink-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                <h3 class="font-bold text-4xl text-white-600" id="counter">10.400+</h3>
+                <p class="text-gray-600">Pesanan Tiap Tahun</p>
+            </div>
+        </div>
+    </section>
+    
+
+    
+    <section class="lokasi container mx-auto text-center my-10">
+        <h2 class="text-2xl font-semibold text-pink-700">Lokasi Cabang Kami</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
+            <div class="lokasi-item bg-pink-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                <h3 class="font-bold text-xl text-white-600">Cabang 1</h3>
+                <p class="text-gray-600">Jl. Makanan Enak No. 123, Kota Lezat, Indonesia</p>
+            </div>
+            <div class="lokasi-item bg-pink-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                <h3 class="font-bold text-xl text-white-600">Cabang 2</h3>
+                <p class="text-gray-600">Jl. Kuliner Sehat No. 456, Kota Lezat, Indonesia</p>
+            </div>
+        </div>
+    </section>
+    
+
+     
+    <!-- Footer -->
+    <footer class="text-center py-6 bg-pink-300 text-white mt-10">
+        <p>Telepon: 0812-3456-7890</p>
+        <p>Email: info@risolesmayo.com</p>
+        <p>&copy; 2025 Toko Risoles Kami. Semua Hak Dilindungi.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
